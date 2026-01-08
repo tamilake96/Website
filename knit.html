@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tami Lake Art</title>
+    <link rel="icon" type="image/png" href="images\Icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Playfair Display & Open Sans Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans+Condensed:wght@300&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="header-title">Tami Lake Art</h1>
+    </header>
+    <div  class="flipbook-wrapper">
+   <div id="flipbook" class="flipbook knit">
+        <div class="hard">Knit Projects<small>-Tami Lake-</small></div>
+        <div class="hard"></div>
+
+        <div>
+            <div class="portfolio-page">
+                <img src="images\knit\checkeredblanket.jpg" alt="Knit Pink Gingham Baby Blanket" class="portfolio-image" onclick="openLightbox(this)">
+                
+                <h3>Double Sided Gingham Super-soft Baby Blanket</h3>
+            </div>
+        </div>
+         
+        <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\blanket-pink.jpg" alt="Knit Pink to Yellow Ombre Baby Blanket" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\blanket-pink-detail.jpg" alt="Knit Pink Baby Blanket Detail" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Moss Stitch Baby Girl Ombre Stroller Blanket</h3>
+            </div>
+        </div>
+
+         <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\blanket-blue.jpg" alt="Knit Blue to Brown Ombre Baby Blanket" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\blanket-blue-detail.jpg" alt="Knit Blue Baby Blanket Detail" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Moss Stitch Baby Boy Ombre Stroller Blanket</h3>
+            </div>
+        </div>
+
+        <div>
+            <div class="portfolio-page">
+                <img src="images\knit\greenonesie.jpg" alt="Knit Green Baby Sweater Onesie" class="portfolio-image" onclick="openLightbox(this)">
+                
+                <h3>Baby Sweater Onesie with Button closures</h3>
+            </div>
+        </div>
+
+         <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\rainbowsweater.jpg" alt="Knit Spring Color Striped Shrug" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\rainbowsweater-back.jpg" alt="Knit Spring Color Striped Shrug Back" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Spring Vibes Striped Sweater Shurg with Braid Cable Detail</h3>
+            </div>
+        </div>
+        
+        <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\sweatervest.jpg" alt="Knit White Sweater Vest" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\sweatervest-detail.jpg" alt="Knit White Sweater Vest Detail" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Moss Stitch Cowl Neck Sweater Vest</h3>
+            </div>
+        </div>
+
+        <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\christmas.jpg" alt="Knit Red & White Sweater" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\christmas-back.jpg" alt="Knit Red & White Sweater Back" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Christmas Two-Tone Sweater with Braid Cable Detail & Christmas Tree Stripes</h3>
+            </div>
+        </div>
+
+        <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\purplecowl.jpg" alt="Knit Purple Cowl Tank" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\purplecowl-back.jpg" alt="Knit Purple Cowl Tank Back" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Lightweight Beach Coverup with Cowl Neck and Open Back</h3>
+            </div>
+        </div>
+
+        <div>
+            <div class="portfolio-page">
+                <div class="two-grid">
+                    <img src="images\knit\bluetop.jpg" alt="Knit Blue Halter Crop Top" class="portfolio-image" onclick="openLightbox(this)">
+                    <img src="images\knit\bluetop-detail.jpg" alt="Knit Blue Halter Crop TopDetail" class="portfolio-image" onclick="openLightbox(this)">
+
+                </div>
+                <h3>Open Back Halter Crop Top with Bauble Details</h3>
+            </div>
+        </div>
+
+        <div>
+            <div class="portfolio-page">
+                <h3>Some patterns available for sale -- message me on the contact page for inquiries.</h3>
+            </div>
+        </div>
+
+        <div class="hard"></div>
+        <div class="hard"><small>If you'd like to collab on something,<br>please reach out on the contact page.</small></div>
+        </div>
+
+        <!-- The One Reusable Modal -->
+        <div id="modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="closeModalBtn">&times;</button>
+                <h2 id="modalTitle">Default Title</h2>
+                <p id="modalBody">Default body text goes here.</p>
+            </div>
+        </div>
+
+        <!--One Reusable Lightbox-->
+         <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" src="" alt="Zoomed Image">
+  </div>
+</div>
+
+     <main>
+         <div class="library-intro">
+            <span>Click through the above book to turn the pages, or select another book below.</span>
+        </div>
+         <div class="bookshelf-container">
+            <div class="bookshelf-row">
+                <div class="bookshelf single-row" role="navigation" aria-label="Main navigation shelf">
+                    <a class="book book-home" href="index.html" tabindex="0" title="Home">
+                        <img src="images/HomePage.png" alt="Home Book">
+                        <span class="book-label">HOME</span>
+                    </a>
+                    <div class="book blank">
+                        <img src="images/Blank_1.png" alt="">
+                    </div>
+                    <a class="book book-art-portfolio" href="portfolio.html" tabindex="0" title="Art Portfolio">
+                        <img src="images/DigitalPortfolio.png" alt="Art Portfolio Book">
+                        <span class="book-label">DIGITAL PORTFOLIO</span>
+                    </a>
+                    <a class="book book-resume" href="resume.html" tabindex="0" title="Resume">
+                        <img src="images/Resume.png" alt="Resume Book">
+                        <span class="book-label">RESUME</span>
+                    </a>
+                    <a class="book book-about-me" href="about.html" tabindex="0" title="About Me">
+                        <img src="images/AboutMe.png" alt="About Me Book">
+                        <span class="book-label">ABOUT ME</span>
+                    </a>
+                    <div class="book blank">
+                        <img src="images/Blank_2.png" alt="">
+                    </div>
+                    <a class="book book-knit-projects" href="crochet.html" tabindex="0" title="Crochet Projects">
+                        <img src="images/CrochetProjects.png" alt="Crochet Projects Book">
+                        <span class="book-label">CROCHET PROJECTS</span>
+                    </a>
+                    <a class="book book-knit-projects current" href="knit.html" tabindex="0" title="Knit Projects">
+                        <img src="images/KnittingProjects.png" alt="Knit Projects Book">
+                        <span class="book-label">KNIT PROJECTS</span>
+                    </a>
+                    <a class="book book-baking-recipes" href="recipes.html" tabindex="0" title="Baking Recipes">
+                        <img src="images/BakingRecipes.png" alt="Baking Recipes Book">
+                        <span class="book-label">BAKING RECIPES</span>
+                    </a>
+                    <div class="book blank">
+                        <img src="images/Blank_1.png" alt="">
+                    </div>
+                    <a class="book book-contact-me" href="contact.html" tabindex="0" title="Contact Me">
+                        <img src="images/ContactMe.png" alt="Contact Me Book">
+                        <span class="book-label">CONTACT ME</span>
+                    </a>
+                    <div class="shelf-base"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <span>Tami Lake Art</span>
+    </footer>
+   <script src="jquery.js"></script>
+    <script src="turn.js"></script>
+   <script src="script.js"></script>
+   
+   <script>
+    $(".flipbook").turn({
+    width: 1000,
+    height: 720,
+    autoCenter: true
+  });
+   </script>
+</body>
+</html>

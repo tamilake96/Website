@@ -320,6 +320,14 @@ body {
     background: #63C0D0 !important;
 }
 
+.crochet .hard{
+    background: #EBCB8B !important;
+}
+
+.knit .hard{
+    background: #4C9A9A !important;
+}
+
 /*FLIPBOOK*/
 .flipbook .hard small{
 	font-style: italic;
