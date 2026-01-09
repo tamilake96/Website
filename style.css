@@ -356,10 +356,11 @@ body {
 .flipbook .page h3,
 .flipbook .page p,
 .flipbook .page button {
-    font-size: clamp(14px, 1.8vw, 40px);
+    font-size: clamp(12px, 1.8vw, 40px);
     text-align: center;
     padding: 0;
 }
+
 
 .flipbook .page button.custom-button {
     font-size: clamp(12px, 1.5vw, 32px);
@@ -401,32 +402,72 @@ body {
 
 /*RESUME PAGES*/
 .resume-entry {
-    margin: 10px;
+    max-width: 800px;
+    margin: 0 auto 2em auto;
+    padding: clamp(10px, 2vw, 20px); /* responsive padding */
+    box-sizing: border-box;
 }
 
+/* Main section heading */
 .resume-entry h1 {
     font-family: 'Playfair Display', serif;
     border-bottom: 2px solid #7A3C99;
     color: #7A3C99;
+    font-size: clamp(12px, 2.5vw, 32px);
+    margin-bottom: clamp(0.3em, 1vw, 0.6em);
 }
 
-.resume-entry h2{
-    padding: 0px;
-    margin: 0px;
+/* Job title */
+.resume-entry h2 {
+    padding: 0;
+    margin: 0;
     font-weight: normal;
+    font-size: clamp(12px, 2.5vw, 32px) !important;
 }
-.resume-entry h4 {
 
-    padding: 0px;
-    margin: 0px;
-    font-weight: normal;    
+/* Job details (location, dates) */
+.resume-entry h4 {
+    padding: 0;
+    margin: 0; /* small vertical spacing */
+    font-weight: normal;
     text-align: center;
     color: #7A3C99;
+    font-size: clamp(10px, 2.5vw, 32px) !important;
 }
 
-.resume-entry li{
-    font-size: clamp(10px, 2vw, 18px);
+.resume h5 {
+    text-align: center;
+    font-size: clamp(14px, 2.5vw, 32px) !important;
 }
+
+/* List of responsibilities */
+.resume-entry ul {
+    padding-left: clamp(15px, 3vw, 30px); /* keep responsive indent */
+    margin: 0; /* remove default top/bottom margins */
+    margin-top: clamp(0.3em, 1vw, 0.5em); /* optional small top spacing */
+}
+
+
+/* Individual bullet points */
+.resume-entry li {
+    font-size: clamp(9px, 2vw, 18px);
+    margin-bottom: clamp(0.2em, 0.5vw, 0.5em); /* spacing between bullets */
+    line-height: 1.4; /* improves readability */
+}
+
+/* Very small screens */
+@media (max-width: 500px) {
+    .resume-entry {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .resume-entry ul {
+        padding-left: 12px;
+    }
+}
+
+
 
 .pdf-button{
     display: flex;
@@ -450,9 +491,10 @@ body {
 }
 
 .flipbook .page .portfolio-page p{
-  font-size: clamp(10px, 1.25vw, 16px) !important;
+  font-size: clamp(9px, 1.25vw, 16px) !important;
   text-align: justify;
   text-align-last: center;
+  margin: 0.1vw;
 }
 
 .flipbook .page .portfolio-page h3{
@@ -723,6 +765,8 @@ textarea {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
 }
 .modal-overlay.active {
   visibility: visible;
@@ -735,11 +779,12 @@ textarea {
   border-radius: 8px;
   max-width: 500px;
   width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
   position: relative;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 
-.close-btn {
+.closeModalBtn {
   position: absolute;
   top: 10px;
   right: 14px;
@@ -751,17 +796,16 @@ textarea {
   cursor: pointer;
 }
 
-.close-btn:hover {
+.closeModalBtn:hover {
   color: #000;
 }
 
 /*Responsive Modal*/
 @media (max-width: 600px) {
     .modal-content {
-        max-height: 90vh;       /* never taller than 90% of the viewport */
-        padding: 16px;          /* shrink padding a bit */
-        width: 95%;             /* almost full width on tiny screens */
-        overflow-y: auto;       /* scroll if content exceeds max-height */
+        width: 95%;
+        max-height: 90vh;
+        padding: 16px;
     }
 
     .modal-content h2 {
@@ -772,7 +816,7 @@ textarea {
         font-size: 0.95rem;     /* slightly smaller text */
     }
 
-    .close-btn {
+    .closeModalBtn {
         font-size: 24px;        /* shrink close button */
         top: 8px;
         right: 10px;
@@ -947,38 +991,11 @@ textarea {
         padding: 16px 10px;
     }
 
-    .resume-entry h1 {
-        font-size: 1 rem;
-    }
-
-    .resume-entry h2 {
-        font-size: 0.85 rem;
-    }
-
-    .resume-entry h4 {
-        font-size: .7 rem;
-    }
-
-    .about p {
-        font-size: 8 px !important;
-    }
 }
-
-
     /*FLIP BOOK*/
 
      /*RESUME*/
-       .resume-entry h1 {
-        font-size: 1.4rem;
-    }
 
-    .resume-entry h2 {
-        font-size: 1rem;
-    }
-
-    .resume-entry h4 {
-        font-size: 0.85rem;
-    }
 
     .resume-image-box {
         width: 60px;
@@ -1072,14 +1089,6 @@ textarea {
         padding: 5px;
     }
 
-    .resume-entry h1 {
-        font-size: 1.2rem;
-    }
-
-    .resume-entry h2,
-    .resume-entry h4 {
-        font-size: 0.8rem;
-    }
 }
 
 
