@@ -755,6 +755,31 @@ textarea {
   color: #000;
 }
 
+/*Responsive Modal*/
+@media (max-width: 600px) {
+    .modal-content {
+        max-height: 90vh;       /* never taller than 90% of the viewport */
+        padding: 16px;          /* shrink padding a bit */
+        width: 95%;             /* almost full width on tiny screens */
+        overflow-y: auto;       /* scroll if content exceeds max-height */
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;      /* smaller title */
+    }
+
+    .modal-content p {
+        font-size: 0.95rem;     /* slightly smaller text */
+    }
+
+    .close-btn {
+        font-size: 24px;        /* shrink close button */
+        top: 8px;
+        right: 10px;
+    }
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .bookshelf.single-row {
