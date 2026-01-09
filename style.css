@@ -958,6 +958,10 @@ textarea {
     .resume-entry h4 {
         font-size: .7 rem;
     }
+
+    .about p {
+        font-size: 8 px !important;
+    }
 }
 
 
