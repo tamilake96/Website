@@ -792,7 +792,7 @@ textarea {
         width: 75vw;
     }
 
-     /*FLIP BOOK*/
+    
 
   
    
@@ -834,7 +834,7 @@ textarea {
         width: 75vw;
     }
 
-    /*RESUME*/
+
    
 
 }
@@ -920,6 +920,18 @@ textarea {
         max-width: 88vw;
         width: 88vw;
         padding: 16px 10px;
+    }
+
+    .resume-entry h1 {
+        font-size: 1 rem;
+    }
+
+    .resume-entry h2 {
+        font-size: 0.85 rem;
+    }
+
+    .resume-entry h4 {
+        font-size: .7 rem;
     }
 }
 
