@@ -881,6 +881,49 @@ textarea {
         padding: 24px 0 18px 0;
     }
 
+    /*TESTING SMALLEST SCREEN*/
+    @media (max-width: 360px) {
+    .profile-section {
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    .bookshelf.single-row {
+        padding: 8px 10px 40px 10px;
+        gap: 2px;
+    }
+
+    .book,
+    .book.blank {
+        height: 140px;
+    }
+
+    .book img,
+    .book.blank img {
+        height: 140px;
+    }
+
+    .book-label {
+        font-size: 0.95em;
+        max-width: 90%;
+        padding: 6px 2px;
+    }
+
+    .shelf-base {
+        height: 44px;
+        width: 96%;
+        bottom: 6px;
+    }
+
+    .profile-blurb-box {
+        font-size: 1.05rem;
+        max-width: 88vw;
+        width: 88vw;
+        padding: 16px 10px;
+    }
+}
+
+
     /*FLIP BOOK*/
 
      /*RESUME*/
