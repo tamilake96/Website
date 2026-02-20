@@ -148,15 +148,41 @@ window.addEventListener('resize', () => {
   }, 150);
 });
 
-//OPEN LIGHTBOX
-function openLightbox(imgElement) {
+function openLightbox(element) {
   const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  
-  lightboxImg.src = imgElement.src;
+  const content = document.getElementById("lightbox-content");
+
+  const videoSrc = element.getAttribute("data-video");
+
+  // If this image has a data-video attribute → open video
+  if (videoSrc) {
+    content.innerHTML = `
+      <video controls autoplay loop style="max-width:90vw; max-height:90vh;">
+        <source src="${videoSrc}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    `;
+  } 
+  // Otherwise → open image normally
+  else {
+    content.innerHTML = `
+      <img src="${element.src}" style="max-width:90vw; max-height:90vh;">
+    `;
+  }
+
   lightbox.style.display = "flex";
 }
 
 function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
+  const lightbox = document.getElementById("lightbox");
+  const content = document.getElementById("lightbox-content");
+
+  const video = content.querySelector("video");
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  content.innerHTML = "";
+  lightbox.style.display = "none";
 }
